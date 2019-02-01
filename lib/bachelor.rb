@@ -48,9 +48,11 @@ def get_average_age_for_season(data, season)
     if season_num == season
       contestants.each do |contestant_hash|
         age_array << contestant_hash["age"]
-        age_array.to_i
       end
     end
+  end
+  age_array.each do |age|
+    age.to_i
   end
   age_array.sum / age_array.size
 end
