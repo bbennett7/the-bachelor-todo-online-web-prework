@@ -57,5 +57,5 @@ def get_average_age_for_season(data, season)
   end
   sum = integer_array.inject(:+)
   size = integer_array.size
-  age_sum/age_size
+  average = (sum.to_f / ages.length).round
 end
