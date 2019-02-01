@@ -44,8 +44,12 @@ end
 
 def get_average_age_for_season(data, season)
   data.each do |season_num, contestants|
-    if data[season_num] == season
-      return season_num
+    if season_num == season
+      contestants.each do |contestant_hash|
+        if contestant_hash["status"] == "Winner"
+          return contestant_hash["name"].split(" ")[0]
+        end
+      end
     end
   end
 end
