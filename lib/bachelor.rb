@@ -55,5 +55,5 @@ def get_average_age_for_season(data, season)
   age_array.each do |age|
     integer_array << age.to_i
   end
-  integer_array
+  integer_array.reduce(:+)
 end
