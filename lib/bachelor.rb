@@ -53,7 +53,7 @@ def get_average_age_for_season(data, season)
     end
   end
   age_array.each do |age|
-    integer_array << age.to_i
+    integer_array << age.to_f
   end
   integer_array.reduce(:+) / integer_array.size
 end
