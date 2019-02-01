@@ -23,7 +23,7 @@ end
 def count_contestants_by_hometown(data, hometown)
   data.each do |season_num, contestants|
     contestants.each do |contestant_hash|
-      contestant_hash["hometown"].count(hometown)
+      contestant_hash["hometown"].count hometown
     end
   end
 end
